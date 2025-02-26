@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-@export var max_jumps: int =2
-var jumps_left: int = 2
+@export var max_jumps: int =1
+var jumps_left: int = 1
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
