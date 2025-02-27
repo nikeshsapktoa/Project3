@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba18cdpsidx02"]
+
+[ext_resource type="PackedScene" uid="uid://dbw6jg6va7coq" path="res://scenes/Player.tscn" id="1_tp4f4"]
+[ext_resource type="Texture2D" uid="uid://d32id5pat8ev7" path="res://assets/Tilemap/rock_packed.png" id="2_dslrq"]
+[ext_resource type="PackedScene" uid="uid://cr3u037ign4pn" path="res://scenes/goal_post.tscn" id="3_wp2l5"]
+[ext_resource type="PackedScene" uid="uid://caheh4b581ta6" path="res://scenes/Spikes.tscn" id="4_agccg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5gwtu"]
+texture = ExtResource("2_dslrq")
+texture_region_size = Vector2i(20, 20)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:3/size_in_atlas = Vector2i(3, 3)
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_i5ef3"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5gwtu")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-1, 1)
+tile_set = SubResource("TileSet_i5ef3")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310684, 0, 0, 1310685, 0, 0, 1310686, 0, 0, 1310687, 0, 0, 1310688, 0, 0, 1310689, 0, 0, 1310690, 0, 0, 1310691, 0, 0, 1310692, 0, 0, 1310693, 0, 0, 1310694, 0, 0, 1310695, 0, 0, 1310696, 0, 0, 1310697, 0, 0, 1310698, 0, 0, 1310699, 0, 0, 1310700, 0, 0, 1310701, 0, 0, 1310702, 0, 0, 1310703, 0, 0, 1310704, 0, 0, 1310705, 0, 0, 1310706, 0, 0, 1310707, 0, 0, 1310714, 0, 0, 1310715, 0, 0, 1310716, 0, 0, 1310717, 0, 0, 1310718, 0, 0, 1310719, 0, 0, 1245184, 0, 0, 1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1310708, 0, 0, 1310709, 0, 0, 1310710, 0, 0, 1310711, 0, 0, 1310712, 0, 0, 1310713, 0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_tp4f4")]
+position = Vector2(-530, 276)
+
+[node name="goal post" parent="." instance=ExtResource("3_wp2l5")]
+position = Vector2(562, 176)
+
+[node name="Area2D" parent="." instance=ExtResource("4_agccg")]
+position = Vector2(-270, 301)
+
+[node name="Area2D2" parent="." instance=ExtResource("4_agccg")]
+position = Vector2(17, 301)
+rotation = 0.00202197
+
+[node name="Area2D3" parent="." instance=ExtResource("4_agccg")]
+position = Vector2(300, 301)
+
+[node name="Area2D4" parent="." instance=ExtResource("4_agccg")]
+position = Vector2(297, 131)
+rotation = 3.14489
