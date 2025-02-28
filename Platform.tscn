@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn0mo1grql8bd"]
+
+[ext_resource type="Texture2D" uid="uid://dqc0r61ynt3os" path="res://assets/Tilemap/rock.png" id="1_m5vc4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f5n6"]
+size = Vector2(54, 19)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(3.91312, 1.38416)
+texture = ExtResource("1_m5vc4")
+region_enabled = true
+region_rect = Rect2(116.117, 40.0248, 13.9791, 13.9791)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1f5n6")
+one_way_collision = true
