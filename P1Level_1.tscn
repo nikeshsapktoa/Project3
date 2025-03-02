@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://gmcnyo028je5"]
+[gd_scene load_steps=7 format=3 uid="uid://gmcnyo028je5"]
 
-[ext_resource type="PackedScene" uid="uid://dbw6jg6va7coq" path="res://scenes/Player.tscn" id="1_73oxx"]
-[ext_resource type="PackedScene" uid="uid://dm88yfyvey4o3" path="res://scenes/saw.tscn" id="3_uh44m"]
-[ext_resource type="Texture2D" uid="uid://d32id5pat8ev7" path="res://assets/Tilemap/rock_packed.png" id="4_pk5qe"]
+[ext_resource type="Texture2D" uid="uid://d32id5pat8ev7" path="res://assets/Tilemap/rock_packed.png" id="1_lu7d3"]
+[ext_resource type="PackedScene" uid="uid://bodr4kir2whyg" path="res://scenes/Player (1).tscn" id="2_21kx0"]
+[ext_resource type="PackedScene" uid="uid://v2w8bgky0ndx" path="res://scenes/move_saw.tscn" id="4_8xny1"]
+[ext_resource type="PackedScene" uid="uid://cr3u037ign4pn" path="res://scenes/goal_post.tscn" id="4_xkvuq"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7pa3l"]
-texture = ExtResource("4_pk5qe")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tltc"]
+texture = ExtResource("1_lu7d3")
 texture_region_size = Vector2i(20, 20)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -68,9 +69,9 @@ texture_region_size = Vector2i(20, 20)
 
 [sub_resource type="TileSet" id="TileSet_kjeli"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7pa3l")
+sources/0 = SubResource("TileSetAtlasSource_5tltc")
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["Player"]]
 position = Vector2(-3, -1)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -79,29 +80,43 @@ tile_set = SubResource("TileSet_kjeli")
 format = 2
 layer_0/tile_data = PackedInt32Array(1310684, 0, 0, 1310685, 0, 0, 1310686, 0, 0, 1310687, 0, 0, 1310688, 0, 0, 1310689, 0, 0, 1310690, 0, 0, 1310691, 0, 0, 1310692, 0, 0, 1310693, 0, 0, 1310694, 0, 0, 1310695, 0, 0, 1310696, 0, 0, 1310697, 0, 0, 1310698, 0, 0, 1310699, 0, 0, 1310700, 0, 0, 1310701, 0, 0, 1310702, 0, 0, 1310703, 0, 0, 1310704, 0, 0, 1310705, 0, 0, 1310706, 0, 0, 1310707, 0, 0, 1310708, 0, 0, 1310709, 0, 0, 1310710, 0, 0, 1310711, 0, 0, 1310712, 0, 0, 1310713, 0, 0, 1310714, 0, 0, 1310715, 0, 0, 1310716, 0, 0, 1310717, 0, 0, 1310718, 0, 0, 1310719, 0, 0, 1245184, 0, 0, 1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1, 1)
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_21kx0")]
+position = Vector2(-537, 277)
 
-[node name="Player" parent="." instance=ExtResource("1_73oxx")]
-position = Vector2(-525, 265)
+[node name="goal post" parent="." groups=["Player"] instance=ExtResource("4_xkvuq")]
+position = Vector2(567, 175)
 
-[node name="Area2D" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(-390, 260)
+[node name="Spinning Saw" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(-397, 262)
+move_distance = 0.0
+speed = 0.0
 
-[node name="Area2D2" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(-204, 260)
+[node name="Spinning Saw2" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(-204, 261)
+move_distance = 0.0
+speed = 0.0
 
-[node name="Area2D3" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(-2, 259)
+[node name="Spinning Saw3" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(3, 263)
+move_distance = 0.0
+speed = 0.0
 
-[node name="Area2D4" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(98, 256)
+[node name="Spinning Saw4" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(2, 71)
+move_distance = 0.0
+speed = 0.0
 
-[node name="Area2D5" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(-3, 140)
+[node name="Spinning Saw5" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(99, 263)
+move_distance = 0.0
+speed = 0.0
 
-[node name="Area2D6" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(360, 250)
+[node name="Spinning Saw6" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(344, 213)
+move_distance = 0.0
+speed = 0.0
 
-[node name="Area2D7" parent="." instance=ExtResource("3_uh44m")]
-position = Vector2(360, 194)
+[node name="Spinning Saw7" parent="." instance=ExtResource("4_8xny1")]
+position = Vector2(344, 274)
+move_distance = 0.0
+speed = 0.0

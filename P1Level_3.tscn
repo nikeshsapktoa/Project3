@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cuk0d1t7ep241"]
 
-[ext_resource type="Texture2D" uid="uid://dqc0r61ynt3os" path="res://assets/Tilemap/rock.png" id="1_46lmp"]
+[ext_resource type="Texture2D" uid="uid://dqc0r61ynt3os" path="res://assets/rock.png" id="1_46lmp"]
+[ext_resource type="PackedScene" uid="uid://bodr4kir2whyg" path="res://scenes/Player (1).tscn" id="2_xatxd"]
 [ext_resource type="PackedScene" uid="uid://v2w8bgky0ndx" path="res://scenes/move_saw.tscn" id="2_youdr"]
-[ext_resource type="PackedScene" uid="uid://dbw6jg6va7coq" path="res://scenes/Player.tscn" id="3_qw4rp"]
 [ext_resource type="PackedScene" uid="uid://cr3u037ign4pn" path="res://scenes/goal_post.tscn" id="4_vvd02"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlrxk"]
@@ -116,44 +116,50 @@ texture_region_size = Vector2i(17, 17)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mlrxk")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" groups=["Player"]]
 position = Vector2(-2, -5)
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." groups=["Player"]]
 position = Vector2(1, -322)
 tile_set = SubResource("TileSet_875oc")
 format = 2
-layer_0/tile_data = PackedInt32Array(1507292, 0, 0, 1507293, 0, 0, 1507294, 0, 0, 1507295, 0, 0, 1507296, 0, 0, 1507297, 0, 0, 1507298, 0, 0, 1507299, 0, 0, 1507300, 0, 0, 1507301, 0, 0, 1507302, 0, 0, 1507303, 0, 0, 1507304, 0, 0, 1507305, 0, 0, 1507306, 0, 0, 1507307, 0, 0, 1507308, 0, 0, 1507309, 0, 0, 1507310, 0, 0, 1507311, 0, 0, 1507312, 0, 0, 1507313, 0, 0, 1507314, 0, 0, 1507315, 0, 0, 1507316, 0, 0, 1507317, 0, 0, 1507318, 0, 0, 1507319, 0, 0, 1507320, 0, 0, 1507321, 0, 0, 1507322, 0, 0, 1507323, 0, 0, 1507324, 0, 0, 1507325, 0, 0, 1507326, 0, 0, 1507327, 0, 0, 1441792, 0, 0, 1441793, 0, 0, 1441794, 0, 0, 1441795, 0, 0, 1441796, 0, 0, 1441797, 0, 0, 1441798, 0, 0, 1441799, 0, 0, 1441800, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1441810, 0, 0, 1441811, 0, 0, 1441812, 0, 0, 1441813, 0, 0, 1441814, 0, 0, 1441815, 0, 0, 1441816, 0, 0, 1441817, 0, 0, 1441818, 0, 0, 1441819, 0, 0, 1441820, 0, 0, 1441821, 0, 0, 1441822, 0, 0, 1441823, 0, 0, 1441824, 0, 0, 1441825, 0, 0, 1441826, 0, 0, 1441827, 0, 0)
+layer_0/tile_data = PackedInt32Array(3276764, 0, 0, 3276765, 0, 0, 3276766, 0, 0, 3276767, 0, 0, 3276768, 0, 0, 3276769, 0, 0, 3276770, 0, 0, 3276771, 0, 0, 3276772, 0, 0, 3276773, 0, 0, 3276774, 0, 0, 3276775, 0, 0, 3276776, 0, 0, 3276777, 0, 0, 3276778, 0, 0, 3276779, 0, 0, 3276780, 0, 0, 3276781, 0, 0, 3276782, 0, 0, 3276783, 0, 0, 3276784, 0, 0, 3276785, 0, 0, 3276786, 0, 0, 3276787, 0, 0, 3276788, 0, 0, 3276789, 0, 0, 3276790, 0, 0, 3276791, 0, 0, 3276792, 0, 0, 3276793, 0, 0, 3276794, 0, 0, 3276795, 0, 0, 3276796, 0, 0, 3276797, 0, 0, 3276798, 0, 0, 3276799, 0, 0, 3211264, 0, 0, 3211265, 0, 0, 3211266, 0, 0, 3211267, 0, 0, 3211268, 0, 0, 3211269, 0, 0, 3211270, 0, 0, 3211271, 0, 0, 3211272, 0, 0, 3211273, 0, 0, 3211274, 0, 0, 3211275, 0, 0, 3211276, 0, 0, 3211277, 0, 0, 3211278, 0, 0, 3211279, 0, 0, 3211280, 0, 0, 3211281, 0, 0, 3211282, 0, 0, 3211283, 0, 0, 3211284, 0, 0, 3211285, 0, 0, 3211286, 0, 0, 3211287, 0, 0, 3211288, 0, 0, 3211289, 0, 0, 3211290, 0, 0, 3211291, 0, 0, 3211292, 0, 0, 3211293, 0, 0, 3211294, 0, 0, 3211295, 0, 0, 3211296, 0, 0, 3211297, 0, 0, 3211298, 0, 0, 3211299, 0, 0, 3276743, 0, 0, 3276744, 0, 0, 3276745, 0, 0, 3276746, 0, 0, 3276747, 0, 0, 3276748, 0, 0, 3276749, 0, 0, 3276750, 0, 0, 3276751, 0, 0, 3276752, 0, 0, 3276753, 0, 0, 3276754, 0, 0, 3276755, 0, 0, 3276756, 0, 0, 3276757, 0, 0, 3276758, 0, 0, 3276759, 0, 0, 3276760, 0, 0, 3276761, 0, 0, 3276762, 0, 0, 3276763, 0, 0, 3276710, 0, 0, 3276711, 0, 0, 3276712, 0, 0, 3276713, 0, 0, 3276714, 0, 0, 3276715, 0, 0, 3276716, 0, 0, 3276717, 0, 0, 3276718, 0, 0, 3276719, 0, 0, 3276720, 0, 0, 3276721, 0, 0, 3276722, 0, 0, 3276723, 0, 0, 3276724, 0, 0, 3276725, 0, 0, 3276726, 0, 0, 3276727, 0, 0, 3276728, 0, 0, 3276729, 0, 0, 3276730, 0, 0, 3276731, 0, 0, 3276732, 0, 0, 3276733, 0, 0, 3276734, 0, 0, 3276735, 0, 0, 3276736, 0, 0, 3276737, 0, 0, 3276738, 0, 0, 3276739, 0, 0, 3276740, 0, 0, 3276741, 0, 0, 3276742, 0, 0, 3211300, 0, 0, 3211301, 0, 0, 3211302, 0, 0, 3211303, 0, 0, 3211304, 0, 0, 3211305, 0, 0, 3211306, 0, 0, 3211307, 0, 0, 3211308, 0, 0, 3211309, 0, 0, 3211310, 0, 0, 3211311, 0, 0, 3211312, 0, 0, 3211313, 0, 0, 3211314, 0, 0, 3211315, 0, 0, 3211316, 0, 0, 3211317, 0, 0, 3211318, 0, 0, 3211319, 0, 0, 3211320, 0, 0, 3211321, 0, 0, 3211322, 0, 0, 3211323, 0, 0, 3211324, 0, 0, 3211325, 0, 0, 3211326, 0, 0, 3211327, 0, 0, 3211328, 0, 0, 3211329, 0, 0, 3211330, 0, 0, 3211331, 0, 0, 3211332, 0, 0, 3211333, 0, 0, 3211334, 0, 0, 3211335, 0, 0, 3211336, 0, 0, 3211337, 0, 0, 3211338, 0, 0, 3211339, 0, 0, 3211340, 0, 0, 3211341, 0, 0, 3211342, 0, 0, 3211343, 0, 0, 3211344, 0, 0, 3211345, 0, 0, 3211346, 0, 0, 3211347, 0, 0, 3211348, 0, 0, 3211349, 0, 0, 3211350, 0, 0, 3211351, 0, 0, 3211352, 0, 0, 3211353, 0, 0, 3211354, 0, 0, 3211355, 0, 0, 3211356, 0, 0, 3211357, 0, 0, 3211358, 0, 0, 3211359, 0, 0, 3211360, 0, 0, 3211361, 0, 0, 3211362, 0, 0, 3211363, 0, 0, 3211364, 0, 0, 3211365, 0, 0, 3211366, 0, 0, 3211367, 0, 0, 3211368, 0, 0, 3211369, 0, 0, 3211370, 0, 0, 3211371, 0, 0, 3211372, 0, 0, 3211373, 0, 0, 3211374, 0, 0, 3211375, 0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-2, -279)
-
-[node name="Player" parent="." instance=ExtResource("3_qw4rp")]
-position = Vector2(-519, 6)
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_xatxd")]
+position = Vector2(-1392, 434)
 
 [node name="Spinning Saw" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(376, -2)
+position = Vector2(-1077, 403)
 rotation = -3.17705
 move_distance = 50.0
 
 [node name="Spinning Saw2" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(2, -3)
+position = Vector2(132, 257)
 
 [node name="Spinning Saw3" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(-332, 2)
-move_distance = 50.0
+position = Vector2(-582, 411)
+speed = 300.0
 
 [node name="Spinning Saw4" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(2, -66)
+position = Vector2(0, 422)
 
 [node name="Spinning Saw5" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(2, -226)
+position = Vector2(-60, 203)
 
 [node name="Spinning Saw6" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(-60, -226)
+position = Vector2(-135, 263)
 
 [node name="Spinning Saw7" parent="." instance=ExtResource("2_youdr")]
-position = Vector2(64, -227)
+position = Vector2(50, 202)
 
-[node name="goal post" parent="." instance=ExtResource("4_vvd02")]
-position = Vector2(564, -98)
+[node name="goal post" parent="." groups=["Player"] instance=ExtResource("4_vvd02")]
+position = Vector2(1777, 333)
+
+[node name="Spinning Saw8" parent="." instance=ExtResource("2_youdr")]
+position = Vector2(673, 428)
+
+[node name="Spinning Saw9" parent="." instance=ExtResource("2_youdr")]
+position = Vector2(994, 426)
+
+[node name="Spinning Saw10" parent="." instance=ExtResource("2_youdr")]
+position = Vector2(1285, 426)
