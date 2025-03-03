@@ -82,8 +82,8 @@ layer_0/tile_data = PackedInt32Array(1310684, 0, 0, 1310685, 0, 0, 1310686, 0, 0
 [node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("2_kwplc")]
 position = Vector2(-1187, 278)
 
-[node name="goal post" parent="." groups=["Player"] instance=ExtResource("3_wp2l5")]
-position = Vector2(562, 176)
+[node name="goal post" parent="." instance=ExtResource("3_wp2l5")]
+position = Vector2(557, 205)
 
 [node name="Area2D" parent="." instance=ExtResource("4_agccg")]
 position = Vector2(-270, 301)
@@ -100,79 +100,12 @@ position = Vector2(293, 132)
 rotation = 3.14308
 
 [node name="Area2D5" parent="." instance=ExtResource("4_agccg")]
-position = Vector2(-947, 299)
+position = Vector2(-946, 301)
+scale = Vector2(1.01352, 0.976422)
 
 [node name="Area2D6" parent="." instance=ExtResource("4_agccg")]
 position = Vector2(-624, 300)
 
 [node name="Area2D7" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-1998, 541)
-
-[node name="Area2D8" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-1807, 539)
-
-[node name="Area2D9" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-1611, 539)
-
-[node name="Area2D10" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-1421, 542)
-
-[node name="Area2D11" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-1229, 542)
-
-[node name="Area2D12" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-1039, 543)
-
-[node name="Area2D13" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-843, 542)
-
-[node name="Area2D14" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-650, 549)
-
-[node name="Area2D15" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-458, 545)
-
-[node name="Area2D16" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-262, 545)
-
-[node name="Area2D17" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(-81, 543)
-
-[node name="Area2D18" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(105, 543)
-
-[node name="Area2D19" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(295, 543)
-
-[node name="Area2D20" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(484, 553)
-
-[node name="Area2D21" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(658, 553)
-
-[node name="Area2D22" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(847, 550)
-
-[node name="Area2D23" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(1034, 551)
-
-[node name="Area2D24" parent="." instance=ExtResource("4_agccg")]
-visible = false
-position = Vector2(1223, 554)
+position = Vector2(-308, 545)
+scale = Vector2(18.56, 1)
