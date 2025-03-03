@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://gmcnyo028je5"]
+[gd_scene load_steps=8 format=3 uid="uid://gmcnyo028je5"]
 
 [ext_resource type="Texture2D" uid="uid://d32id5pat8ev7" path="res://assets/Tilemap/rock_packed.png" id="1_lu7d3"]
 [ext_resource type="PackedScene" uid="uid://bodr4kir2whyg" path="res://scenes/Player (1).tscn" id="2_21kx0"]
 [ext_resource type="PackedScene" uid="uid://v2w8bgky0ndx" path="res://scenes/move_saw.tscn" id="4_8xny1"]
 [ext_resource type="PackedScene" uid="uid://cr3u037ign4pn" path="res://scenes/goal_post.tscn" id="4_xkvuq"]
+[ext_resource type="PackedScene" uid="uid://caheh4b581ta6" path="res://scenes/Spikes.tscn" id="5_mv6xg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tltc"]
 texture = ExtResource("1_lu7d3")
@@ -120,3 +121,63 @@ speed = 0.0
 position = Vector2(344, 274)
 move_distance = 0.0
 speed = 0.0
+
+[node name="Area2D" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-1401, 578)
+
+[node name="Area2D2" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-1207, 581)
+
+[node name="Area2D3" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-1016, 583)
+
+[node name="Area2D4" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-828, 583)
+
+[node name="Area2D5" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-640, 584)
+
+[node name="Area2D6" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-447, 584)
+
+[node name="Area2D7" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-256, 584)
+
+[node name="Area2D8" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(-63, 586)
+
+[node name="Area2D9" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(129, 589)
+
+[node name="Area2D10" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(315, 589)
+
+[node name="Area2D11" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(497, 592)
+
+[node name="Area2D12" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(688, 592)
+
+[node name="Area2D13" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(878, 592)
+
+[node name="Area2D14" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(1066, 595)
+
+[node name="Area2D15" parent="." instance=ExtResource("5_mv6xg")]
+visible = false
+position = Vector2(1260, 595)

@@ -250,3 +250,63 @@ speed = 500.0
 
 [node name="goal post" parent="." instance=ExtResource("6_dexiy")]
 position = Vector2(703, -624)
+
+[node name="Area2D7" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(-1005, 625)
+
+[node name="Area2D8" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(-816, 630)
+
+[node name="Area2D9" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(-623, 630)
+
+[node name="Area2D10" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(-435, 630)
+
+[node name="Area2D11" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(-246, 630)
+
+[node name="Area2D12" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(-54, 630)
+
+[node name="Area2D13" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(141, 630)
+
+[node name="Area2D14" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(334, 630)
+
+[node name="Area2D15" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(529, 633)
+
+[node name="Area2D16" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(722, 633)
+
+[node name="Area2D17" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(910, 636)
+
+[node name="Area2D18" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(1106, 636)
+
+[node name="Area2D19" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(1305, 636)
+
+[node name="Area2D20" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(1501, 640)
+
+[node name="Area2D21" parent="." instance=ExtResource("5_mfaap")]
+visible = false
+position = Vector2(1690, 640)

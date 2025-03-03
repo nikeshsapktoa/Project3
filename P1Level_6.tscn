@@ -193,3 +193,55 @@ position = Vector2(-62, -303)
 [node name="Area2D2" parent="." instance=ExtResource("5_8t3yn")]
 position = Vector2(-44, -272)
 rotation = 1.57084
+
+[node name="Area2D3" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(-1145, 581)
+
+[node name="Area2D4" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(-950, 584)
+
+[node name="Area2D5" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(-756, 584)
+
+[node name="Area2D6" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(-562, 584)
+
+[node name="Area2D7" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(-371, 584)
+
+[node name="Area2D8" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(-177, 584)
+
+[node name="Area2D9" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(11, 584)
+
+[node name="Area2D10" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(205, 586)
+
+[node name="Area2D11" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(399, 587)
+
+[node name="Area2D12" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(591, 587)
+
+[node name="Area2D13" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(783, 587)
+
+[node name="Area2D14" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(979, 587)
+
+[node name="Area2D15" parent="." instance=ExtResource("5_8t3yn")]
+visible = false
+position = Vector2(1171, 585)
