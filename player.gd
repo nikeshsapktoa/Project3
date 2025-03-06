@@ -30,17 +30,19 @@ func _physics_process(delta: float) -> void:
 	
 func handle_movement_animation(direction):
 	if is_on_floor():
-		if !velocity:
+		if velocity == Vector2.ZERO:
 			animated_sprite.play("idle")
-			if velocity:
-				animated_sprite.play("run")
-				toggle_flip_sprite(direction)
-				
-			
+		else:
+			animated_sprite.play("run")
+			toggle_flip_sprite(direction)
+	else:
+		animated_sprite.play("jump")
 func toggle_flip_sprite(direction):
 	if direction == 1:
-		animated_sprite.flip_h == false
+		animated_sprite.flip_h = false
 	if direction == -1:
 		animated_sprite.flip_h = true
 	
-	
+func kill():
+	queue_free()
+	get_tree().reload_current_scene()
