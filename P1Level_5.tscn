@@ -1,0 +1,202 @@
+[gd_scene load_steps=9 format=3 uid="uid://uqudoswp8ijy"]
+
+[ext_resource type="Texture2D" uid="uid://dqc0r61ynt3os" path="res://assets/rock.png" id="1_wrxu0"]
+[ext_resource type="PackedScene" uid="uid://bodr4kir2whyg" path="res://scenes/Player (1).tscn" id="2_bl8th"]
+[ext_resource type="PackedScene" uid="uid://dn0mo1grql8bd" path="res://scenes/Platform.tscn" id="3_cc55l"]
+[ext_resource type="PackedScene" uid="uid://v2w8bgky0ndx" path="res://scenes/move_saw.tscn" id="4_h0voh"]
+[ext_resource type="PackedScene" uid="uid://caheh4b581ta6" path="res://scenes/Spikes.tscn" id="5_7rqqa"]
+[ext_resource type="PackedScene" uid="uid://cr3u037ign4pn" path="res://scenes/goal_post.tscn" id="6_y31og"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7kip4"]
+texture = ExtResource("1_wrxu0")
+margins = Vector2i(1, 1)
+separation = Vector2i(2, 2)
+texture_region_size = Vector2i(17, 17)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h10pm"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_7kip4")
+
+[node name="Node2D" type="Node2D" groups=["Player"]]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_h10pm")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310684, 0, 0, 1310685, 0, 0, 1310686, 0, 0, 1310687, 0, 0, 1310688, 0, 0, 1310689, 0, 0, 1310690, 0, 0, 1310691, 0, 0, 1310692, 0, 0, 1310693, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 0, 0, 458782, 0, 0, 458783, 0, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458787, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 0, 0, -131052, 0, 0, -131051, 0, 0, -131050, 0, 0, -131049, 0, 0, -131048, 0, 0, -131047, 0, 0, -131046, 0, 0, -131045, 0, 0, -131044, 0, 0, -131043, 0, 0, -131042, 0, 0, -131041, 0, 0, -131069, 0, 0, -131040, 0, 0, -65563, 0, 0, -65562, 0, 0, -65561, 0, 0, -65560, 0, 0, -65559, 0, 0, -65558, 0, 0, -65557, 0, 0, -65556, 0, 0, -65555, 0, 0, -65554, 0, 0, -65553, 0, 0, -65552, 0, 0, -65551, 0, 0, -65550, 0, 0, -65549, 0, 0, -65548, 0, 0, -65547, 0, 0, -65546, 0, 0, -65545, 0, 0, -65544, 0, 0, -65543, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -65571, 0, 0, -65570, 0, 0, -65569, 0, 0, -65568, 0, 0, -65567, 0, 0, -65566, 0, 0, -65565, 0, 0, -65564, 0, 0, -65572, 0, 0, -655392, 0, 0, -655391, 0, 0, -655390, 0, 0, -655389, 0, 0, -655388, 0, 0, -655387, 0, 0, -655386, 0, 0, -655385, 0, 0, -655384, 0, 0, -655383, 0, 0, -655382, 0, 0, -655381, 0, 0, -655380, 0, 0, -655379, 0, 0, -655378, 0, 0, -655377, 0, 0, -655376, 0, 0, -655375, 0, 0, -655374, 0, 0, -655373, 0, 0, -655372, 0, 0, -655371, 0, 0, -655370, 0, 0, -655369, 0, 0, -655368, 0, 0, -655367, 0, 0, -655366, 0, 0, -655365, 0, 0, -655364, 0, 0)
+
+[node name="player" parent="." groups=["Player"] instance=ExtResource("2_bl8th")]
+position = Vector2(-542, 273)
+rotation = -0.0111263
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("3_cc55l")]
+position = Vector2(-298, 226)
+
+[node name="AnimatableBody2D2" parent="." instance=ExtResource("3_cc55l")]
+position = Vector2(-157, 160)
+
+[node name="Spinning Saw" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-388, 198)
+move_distance = 0.0
+
+[node name="Spinning Saw2" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-224, 120)
+move_distance = 0.0
+
+[node name="Spinning Saw3" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-223, 187)
+move_distance = 0.0
+
+[node name="AnimatableBody2D3" parent="." instance=ExtResource("3_cc55l")]
+position = Vector2(-27, 107)
+
+[node name="Spinning Saw4" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-89, 65)
+move_distance = 0.0
+
+[node name="Spinning Saw5" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-90, 4)
+move_distance = 0.0
+
+[node name="Spinning Saw6" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-91, -55)
+move_distance = 0.0
+
+[node name="Area2D" parent="." instance=ExtResource("5_7rqqa")]
+position = Vector2(256, 109)
+
+[node name="AnimatableBody2D4" parent="." instance=ExtResource("3_cc55l")]
+position = Vector2(547, -5)
+
+[node name="Spinning Saw7" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-38, -26)
+move_distance = 510.0
+speed = 500.0
+
+[node name="AnimatableBody2D5" parent="." instance=ExtResource("3_cc55l")]
+position = Vector2(-546, -144)
+
+[node name="Spinning Saw8" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-426, -210)
+move_distance = 0.0
+
+[node name="Spinning Saw9" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-311, -271)
+move_distance = 0.0
+
+[node name="Spinning Saw10" parent="." instance=ExtResource("4_h0voh")]
+position = Vector2(-203, -208)
+move_distance = 0.0
+
+[node name="goal post" parent="." instance=ExtResource("6_y31og")]
+position = Vector2(-64, -278)
+
+[node name="Area2D2" parent="." instance=ExtResource("5_7rqqa")]
+visible = false
+position = Vector2(-34, -272)
+rotation = 1.66635
+
+[node name="Area2D3" parent="." instance=ExtResource("5_7rqqa")]
+visible = false
+position = Vector2(-192, 573)
+scale = Vector2(20.36, 1)
