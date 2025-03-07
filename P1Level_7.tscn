@@ -119,10 +119,10 @@ texture_region_size = Vector2i(17, 17)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_87ngl")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" groups=["Player"]]
 
 [node name="player" parent="." groups=["Player"] instance=ExtResource("2_f40tg")]
-position = Vector2(98, 560)
+position = Vector2(103, 556)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_0n0dw")
