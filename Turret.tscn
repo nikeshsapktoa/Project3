@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhkfg6utyct5a"]
+
+[ext_resource type="Script" path="res://scripts/Turret.gd" id="1_6ep2m"]
+[ext_resource type="PackedScene" uid="uid://n7rey8ghexs7" path="res://scenes/projectile.tscn" id="2_x50uj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k8d2f"]
+size = Vector2(10, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ly4m2"]
+size = Vector2(954, 77)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6ep2m")
+projectile_scene = ExtResource("2_x50uj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_k8d2f")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(468, 1.5)
+shape = SubResource("RectangleShape2D_ly4m2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
